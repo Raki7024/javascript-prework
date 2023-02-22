@@ -1,4 +1,12 @@
 'use strict';
+const buttonRock = document.getElementById('button-rock');
+buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
+
+const buttonPaper = document.getElementById('button-paper');
+buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
+
+const buttonScissors = document.getElementById('button-scissors');
+buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
 
 function buttonClicked(playerMove) {
   clearMessages();
@@ -21,14 +29,6 @@ function getMoveName(argMoveId) {
   } 
 }
 
-const buttonRock = document.getElementById('button-rock');
-buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
-
-const buttonPaper = document.getElementById('button-paper');
-buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
-
-const buttonScissors = document.getElementById('button-scissors');
-buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
 
 function displayResult(argPlayerMove, argComputerMove) {
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {

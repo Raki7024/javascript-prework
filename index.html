@@ -3,16 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+    >
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
+		<h1>ROCK, PAPER, SCISSORS!<i class="fa-regular fa-hand-scissors"></i></h1>
 		<div id="buttons">
-			<button id="button-rock">Kamień</button>
-<button id="button-paper">Papier</button>
-<button id="button-scissors">Nożyce</button>
+			<button type="button" id="button-rock" class="button">Kamień</button>
+      <button type="button" id="button-paper" class="button">Papier</button>
+      <button type="button" id="button-scissors" class="button">Nożyce</button>
 		</div>
-		<div id="messages"></div>
+	  <div id="messages" class="messages"></div>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
