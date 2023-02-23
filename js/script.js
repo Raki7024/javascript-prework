@@ -1,20 +1,10 @@
 'use strict';
-const buttonRock = document.getElementById('button-rock');
-buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
-
-const buttonPaper = document.getElementById('button-paper');
-buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
-
-const buttonScissors = document.getElementById('button-scissors');
-buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
 
 function buttonClicked(playerMove) {
   clearMessages();
-
   const randomNumber = Math.floor(Math.random() * 3 + 1);
   const computerMove = getMoveName(randomNumber);
   printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerMove);
-  
   displayResult(playerMove.toLowerCase(), computerMove);
 }
 
@@ -43,4 +33,12 @@ function displayResult(argPlayerMove, argComputerMove) {
     printMessage('Przegrywasz :(');
   }
 }
+const buttonRock = document.getElementById('button-rock');
+buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
+
+const buttonPaper = document.getElementById('button-paper');
+buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
+
+const buttonScissors = document.getElementById('button-scissors');
+buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
 
